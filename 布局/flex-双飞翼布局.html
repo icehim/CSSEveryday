@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            height: 100%;
+        }
+
+        header {
+            background-color: darkseagreen;
+        }
+
+        footer {
+            background-color: darkseagreen;
+        }
+
+        .main {
+            background-color: red;
+        }
+
+        .left {
+            background-color: green;
+        }
+
+        .right {
+            background-color: yellowgreen;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            display: flex;
+            flex: 1;
+        }
+
+        .left {
+            order: -1;
+        }
+
+        .main {
+            flex: 1;
+        }
+
+        .left, .right {
+            flex: 0 0 100px;
+        }
+
+        @media screen and (max-width: 768px) {
+            section {
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .main {
+                flex: 1;
+            }
+
+            .left, .right {
+                flex: 0 0 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>头头是道</header>
+<section>
+    <div class="main">主要内容区域</div>
+    <div class="left">虚左以待</div>
+    <div class="right">无出其右</div>
+</section>
+<footer>海底捞月</footer>
+</body>
+</html>
