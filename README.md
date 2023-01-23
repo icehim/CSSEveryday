@@ -13,3 +13,7 @@
 
 
 ![cssday1](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/cssday1.gif)
+
+## day2-汉堡菜单
+
+![汉堡菜单](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/%E6%B1%89%E5%A0%A1%E8%8F%9C%E5%8D%95.gif)
