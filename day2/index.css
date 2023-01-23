@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #232323;
+    color: #cdcdcd;
+}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none; /*防止选取元素的文本*/
+}
+
+#menuToggle a {
+    text-decoration: none; /*去除a标签默认下划线*/
+    color: #cdcdcd;
+    transition: color 0.3s ease; /*给a标签出现添加一个过度效果*/
+}
+
+
+#menuToggle a:hover { /*a标签鼠标悬停效果*/
+    color: tomato;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer; /**/
+}
