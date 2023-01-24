@@ -4,7 +4,7 @@
 
 ### 双飞翼布局 flex实现，两边固定中间自适应，媒体查询，宽度变窄，两边上下排列
 
-![双飞翼布局](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/%E5%8A%A8%E7%94%BB.gif)
+![双飞翼布局](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora%2F%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80.gif)
 
 ## day1-单选框效果
 
