@@ -1,0 +1,82 @@
+.styled-checkbox {
+  position: absolute;
+  opacity: 0; /*隐藏默认的框框*/
+
+  //scss中'&'代指父类
+  //'+' 相邻兄弟选择器 匹配指定元素后面紧相邻的兄弟元素
+  & + label {
+    position: relative;
+    cursor: pointer; /*小手样式*/
+    padding: 0;
+  }
+
+  //伪元素:设置白色框框
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top; /*设置元素的垂直对齐方式*/
+    width: 20px;
+    height: 20px;
+    background: white;
+  }
+
+  //鼠标经过box改变颜色
+  &:hover + label:before {
+    background: #f35429;
+  }
+
+  //白盒子聚焦周围有阴影
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  //选中之后box改变颜色
+  &:checked + label:before {
+    background: #f35429;
+  }
+
+  //设置被禁用的单选框样式
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  //伪元素：用盒子阴影画√
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: blue;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 blue,
+    4px 0 0 blue,
+    4px -2px 0 blue,
+    4px -4px 0 blue,
+    4px -6px 0 blue,
+    4px -8px 0 blue;
+    transform: rotate(45deg);
+  }
+}
+
+html {
+  background: lightgray;
+}
+
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.centered {
+  width: 300px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  color: rgb(69, 113, 236);
+}
