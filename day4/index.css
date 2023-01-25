@@ -1,0 +1,88 @@
+@charset "UTF-8";
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #b8b8b8; }
+
+h1 {
+  text-align: center;
+  color: purple;
+  margin: 80px 0; }
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px/50px;
+  /*  /之前的值是水平半径，/之后 的值是垂直半径，如果没有/，就会默认两个值相等  */
+  text-align: center; }
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid mediumvioletred;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out; }
+
+.button:hover {
+  background: mediumvioletred; }
+
+/*模态框样式*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0; }
+
+.overlay:target {
+  /*改变页面中锚链接URL所指向的元素的样式 实现模态框*/
+  visibility: visible;
+  opacity: 1; }
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out; }
+
+.popup h2 {
+  margin-top: 0;
+  color: #333; }
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  /*加粗*/ }
+
+.popup .close:hover {
+  color: #06D85F; }
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto; }
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%; }
+  .popup {
+    width: 70%; } }
