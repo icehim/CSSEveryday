@@ -17,3 +17,7 @@
 ## day3-CSS自定义多选框
 
 ![自定义多选框](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%8D%E9%80%89%E6%A1%86.gif)
+
+## day4-CSS实现模态框
+
+![模态框](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/%E6%A8%A1%E6%80%81%E6%A1%86.gif)
