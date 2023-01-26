@@ -1,0 +1,56 @@
+/*定义scss变量*/
+$glass: rgba(255, 255, 255, 0.2);
+$glass-icon: rgba(255, 255, 255, 0.3);
+$gradient: linear-gradient(35deg, red, purple); /*linear-gradient函数用于创建一个表示两种或多种颜色线性渐变的图片。*/
+$option: #320a28;
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+}
+
+body {
+  background: $gradient no-repeat;
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+//下拉框样式
+select {
+  //重置默认下拉框样式
+  appearance: none; /*用于修改元素的默认的样式*/
+  border: 0;
+  outline: 0; /*设置元素周围轮廓*/
+  font: inherit; /*从父元素继承字体样式*/
+  //自定义下拉框样式
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg") no-repeat right 0.8em center / 1.4em, /*background-position/background-size*/
+  linear-gradient(to left, $glass-icon 3em, $glass 3em); /*下拉框渐变色*/
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  option {
+    color: inherit;
+    background-color: $option;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+
