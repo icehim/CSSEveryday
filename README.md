@@ -27,3 +27,5 @@
 ![css下拉框](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/css%E4%B8%8B%E6%8B%89%E6%A1%86.gif)
 
 ## day6-loading效果
+
+![loading效果](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/loading%E6%95%88%E6%9E%9C.gif)
