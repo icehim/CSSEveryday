@@ -29,3 +29,7 @@
 ## day6-loading效果
 
 ![loading效果](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/loading%E6%95%88%E6%9E%9C.gif)
+
+## day7-CSS选项卡
+
+![css选项卡](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/css%E9%80%89%E9%A1%B9%E5%8D%A1.gif)
