@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 选项卡</title>
+    <link href="./screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h1>CSS 选项卡</h1>
+<ul class="tabs" role="tablist">
+    <li>
+        <input type="radio" name="tabs" id="tab1" checked>
+        <!--role增强语义-->
+        <!--aria-开头的属性是为了增强网页在残障辅助阅读设备上的识别读取-->
+        <!--tabindex-带有指定 tab 键顺序的链接：-->
+        <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">
+            选项卡一
+        </label>
+        <div
+                id="tab-content1"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="description"
+                aria-hidden="false"
+        >
+        <p>选项卡一内容</p>
+        </div>
+    </li>
+    <li>
+        <input type="radio" name="tabs" id="tab2">
+        <label for="tab2" role="tab" aria-selected="false" aria-controls="panel12" tabindex="0">选项卡二</label>
+        <div
+                id="tab-content2"
+                class="tab-content"
+                role="tabpanel1"
+                aria-labelledby="specification"
+                aria-hidden="true"
+        >
+            <p>
+                选项卡二内容
+            </p>
+        </div>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 11, ../sass/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 16, ../sass/screen.scss */
+body {
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  background: #9b59b6;
+}
+
+/* line 22, ../sass/screen.scss */
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+  text-transform: uppercase;
+  /*控制文本的大小写属性*/
+  float: left;
+  margin: 20px 0 100px 10px;
+}
+/* line 28, ../sass/screen.scss */
+h1 span {
+  font-size: 13px;
+  display: block;
+  padding-left: 4px;
+}
+
+/* line 34, ../sass/screen.scss */
+.tabs {
+  width: 650px;
+  float: none;
+  list-style: none;
+  position: relative;
+  margin: 80px 0 0 10px;
+  text-align: left;
+}
+/* line 41, ../sass/screen.scss */
+.tabs li {
+  float: left;
+  display: block;
+}
+/* line 45, ../sass/screen.scss */
+.tabs input[type='radio'] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+/* line 50, ../sass/screen.scss */
+.tabs label {
+  display: block;
+  padding: 14px 21px;
+  border-radius: 2px 2px 0 0;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: #8e44ad;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  -moz-transition: al 0.2s ease-in-out;
+  -o-transition: al 0.2s ease-in-out;
+  -webkit-transition: al 0.2s ease-in-out;
+  transition: al 0.2s ease-in-out;
+}
+/* line 62, ../sass/screen.scss */
+.tabs label:hover {
+  background: #703688;
+}
+/* line 70, ../sass/screen.scss */
+.tabs .tab-content {
+  z-index: 2;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 25px;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  background: #612e76;
+}
+/* line 84, ../sass/screen.scss */
+.tabs [id^='tab']:checked + label {
+  top: 0;
+  padding-top: 17px;
+  background: #612e76;
+}
+/* line 90, ../sass/screen.scss */
+.tabs [id^='tab']:checked ~ [id^='tab-content'] {
+  display: block;
+}
