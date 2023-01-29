@@ -33,3 +33,7 @@
 ## day7-CSS选项卡
 
 ![css选项卡](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/css%E9%80%89%E9%A1%B9%E5%8D%A1.gif)
+
+day8-CSS导航栏
+
+![css导航栏](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/css%E5%AF%BC%E8%88%AA%E6%A0%8F.gif)
