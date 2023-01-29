@@ -1,0 +1,99 @@
+body{
+    background: #212121;
+    font-size: 22px;
+    line-height: 32px;
+    color: #ffffff;
+    word-wrap: break-word !important;/*文本自动换行*/
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+}
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #FFF;
+}
+
+h3 a {
+    color: #FFF;
+}
+
+a{
+    color: #fff;
+}
+h1{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 60px;
+}
+#container{
+    margin: 0 auto;
+}
+p{
+    text-align: center;
+}
+nav{
+    margin: 50px 0;
+    background-color: #E64A19;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li {
+    display: inline-block;
+    background-color: #E64A19;
+}
+
+nav a {
+    display: block;
+    padding: 0 10px;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #000;
+}
+/*隐藏子菜单*/
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+/*鼠标经过父菜单时子菜单显示方式为继承*/
+nav ul li:hover>ul{
+    display: inherit;
+}
+
+/*一级子菜单*/
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+/*二级子菜单*/
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+/*'>'子选择器,选择li标签中为第一个的a标签*/
+/*注意标签之间的嵌套,可能会使选择器失效*/
+/*li元素所有的a标签*/
+li>a:after{
+    content: '+';
+}
+/*li中只有子标签a时*/
+li>a:only-child:after{
+    content: '';
+}
