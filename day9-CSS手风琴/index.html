@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS手风琴</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<h1>纯CSS实现手风琴</h1>
+<div class="row">
+    <div class="col">
+        <h2>打开 <b>多项</b></h2>
+        <div class="tabs">
+            <div class="tab">
+                <input type="checkbox" id="check1">
+                <!--'for':点击label标签会触发绑定的input框-->
+                <label class="tab-label" for="check1">车厘子</label>
+                <div class="tab-content">
+                    车厘子（英文名：Cherries）是欧洲甜樱桃栽培品种。音译自英语单词Cherries（即樱桃），特指产于美国、加拿大、智利等美洲国家的个大皮厚樱桃
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" id="check2">
+                <label class="tab-label" for="check2">菠萝</label>
+                <div class="tab-content">
+                    为著名热带水果之一。其植株茎短，叶多数，莲座式排列，剑形，顶端渐尖，全缘或有锐齿，腹面绿色，背面粉绿色，边缘和顶端常带褐红色，生于花序顶部的叶变小，常呈红色。
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h2>打开 <b>一项</b></h2>
+        <div class="tabs">
+            <div class="tab">
+                <input type="radio" id="rd1" name="rd">
+                <label class="tab-label" for="rd1">菠萝蜜</label>
+                <div class="tab-content">
+                    波罗蜜（学名：Artocarpus heterophyllus Lam.）是桑科波罗蜜属植物，常绿乔木，树高10-20米，胸径达30-50厘米；托叶抱茎环状，遗痕明显。
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd2" name="rd">
+                <label class="tab-label" for="rd2">西瓜</label>
+                <div class="tab-content">
+                    西瓜（学名：Citrullus lanatus (Thunb.) Matsum. et Nakai）一年生蔓生藤本；茎、枝粗壮，具明显的棱。
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" id="rd3" name="rd">
+                <label class="tab-close" for="rd3">关闭所有 &times;</label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
