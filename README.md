@@ -45,3 +45,7 @@
 ## day10-按钮悬停
 
 ![CSS按钮悬停](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/CSS%E6%8C%89%E9%92%AE%E6%82%AC%E5%81%9C.gif)
+
+## day11-CSS动画背景
+
+![动画背景](https://wordpress-1253884057.cos.ap-beijing.myqcloud.com/typora/%E5%8A%A8%E7%94%BB%E8%83%8C%E6%99%AF.gif)
