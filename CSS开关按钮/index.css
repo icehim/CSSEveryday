@@ -104,6 +104,7 @@ body {
     z-index: 1;
 }
 
+/*按钮1*/
 /*给按钮添加前伪元素*/
 #button-1 .knobs:before {
     content: '开';
@@ -139,4 +140,50 @@ body {
 #button-1 .knobs:before,
 #button-1 .layer {
     transition: 0.3s ease all;
+}
+
+/*按钮2*/
+#button-2 .knobs:before,
+#button-2 .knobs:after {
+    content: "开";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+}
+
+#button-2 .knobs:before {
+    content: '开';
+}
+
+#button-2 .knobs:after {
+    content: '关';
+}
+
+#button-2 .knobs:after {
+    right: -28px;
+    left: auto;
+    background-color: #f44336;
+}
+
+#button-2 .checkbox:checked + .knobs:before {
+    left: -28px;
+}
+
+#button-2 .checkbox:checked + .knobs:after {
+    right: 4px;
+}
+
+#button-2 .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
 }
