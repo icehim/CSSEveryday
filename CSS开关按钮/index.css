@@ -187,3 +187,39 @@ body {
 #button-2 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
+
+/*按钮3*/
+#button-3 .knobs:before{
+    content: '开';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+/*:active 鼠标按下还没松开的事件*/
+#button-3 .checkbox:active + .knobs:before{
+    width: 46px;
+    border-radius: 100px;
+}
+#button-3 .checkbox:checked:active + .knobs:before{
+    margin-left: -26px;
+}
+#button-3 .checkbox:checked + .knobs:before{
+    content: '关';
+    left: 42px;
+    background-color: #f44336;
+}
+
+#button-3 .checkbox:checked ~.layer{
+    background-color: #fcebeb;
+}
