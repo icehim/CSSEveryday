@@ -329,3 +329,44 @@ body {
     transition: 0.3s ease all;
 }
 
+/*按钮6*/
+#button-6{
+    overflow: visible;
+}
+#button-6 .knobs:before{
+    content: '开';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+}
+#button-6 .layer,
+#button-6 .knobs,
+#button-6 .knobs:before{
+    transform: rotateZ(0);
+    transition: 0.4s cubic-bezier(0.18,0.89,0.35,1.15) all;
+}
+/*'开'逆时针转180度*/
+#button-6 .checkbox:checked + .knobs {
+    transform: rotateZ(-180deg);
+}
+/*'关'顺时针转180度*/
+#button-6 .checkbox:checked + .knobs:before{
+    content: '关';
+    background-color: #f44336;
+    transform: rotateZ(180deg);
+}
+/*按钮背景顺时针转180°*/
+#button-6 .checkbox:checked ~.layer{
+    background-color: #fcebeb;
+    transform: rotateZ(180deg);
+}
