@@ -370,3 +370,62 @@ body {
     background-color: #fcebeb;
     transform: rotateZ(180deg);
 }
+/*按钮7*/
+#button-7 .knobs:before,
+#button-7 .knobs:after,
+#button-7 .knobs span {
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 50%;
+}
+
+#button-7 .knobs:before{
+    content: '开';
+    left: 4px;
+    color: #ffffff;
+    opacity: 1;
+}
+#button-7 .knobs:after{
+    content: '关';
+    left: 42px;
+    color: #fff;
+    width: 14px;
+    text-align: left;
+    padding: 9px 7px;
+    background-color: #f44336;
+    opacity: 0;
+}
+#button-7 .knobs:before,
+#button-7 .knobs:after{
+    transition: 0.3s ease all;
+    z-index: 2;
+}
+#button-7 .knobs span{
+    left: 4px;
+    background-color: #03a9f4;
+    transition: 0.2s ease all;
+    z-index: 1;
+}
+#button-7 .checkbox:checked + .knobs:before{
+    opacity: 0;
+}
+#button-7 .checkbox:checked + .knobs:after{
+    opacity: 1;
+}
+#button-7 .checkbox:checked +.knobs span{
+    top: 14px;
+    left: 56px;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+#button-7 .checkbox:checked ~.layer{
+    background-color: #fcebeb;
+}
