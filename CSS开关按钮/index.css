@@ -68,7 +68,7 @@ body {
     width: 74px;
     height: 36px;
     margin: -20px auto 0 auto;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .button.r,
@@ -876,9 +876,10 @@ body {
 #button-14 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
+
 /*按钮15*/
 #button-15 .knobs:before,
-#button-15 .knobs:after{
+#button-15 .knobs:after {
     position: absolute;
     top: 4px;
     width: 20px;
@@ -892,13 +893,15 @@ body {
     opacity: 1;
     border-radius: 2px;
     transform: scale(1);
-    transition: 0.3s cubic-bezier(0.18,0.89,0.35,1.15);
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
-#button-15 .knobs:before{
+
+#button-15 .knobs:before {
     content: '开';
     left: 4px;
     background-color: #03a9f4;
 }
+
 #button-15 .knobs:after {
     content: '关';
     right: 4px;
@@ -906,19 +909,23 @@ body {
     transform: scale(4);
     background-color: #f44336;
 }
+
 #button-15 .checkbox:checked + .knobs:before {
     opacity: 0;
     transform: scale(4);
 }
-#button-15 .checkbox:checked + .knobs:after{
+
+#button-15 .checkbox:checked + .knobs:after {
     opacity: 1;
     transform: scale(1);
 }
-#button-15 .checkbox:checked ~ .layer{
+
+#button-15 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
+
 /*按钮16*/
-#button-16 .knobs:before{
+#button-16 .knobs:before {
     content: '开';
     position: absolute;
     top: 4px;
@@ -933,26 +940,31 @@ body {
     padding: 9px 4px;
     background-color: #03a9f4;
     border-radius: 2px;
-    transition: 0.3s ease all,left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
+
 /*点击变长*/
-#button-16 .checkbox:active + .knobs:before{
+#button-16 .checkbox:active + .knobs:before {
     width: 46px;
 }
+
 #button-16 .checkbox:checked:active + .knobs:before {
     margin-left: -26px;
 }
+
 #button-16 .checkbox:checked + .knobs:before {
     content: '关';
     left: 42px;
     background-color: #f44336;
 }
-#button-16 .checkbox:checked ~ .layer{
+
+#button-16 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
+
 /*按钮17*/
 #button-17 .knobs:before,
-#button-17 .knobs span{
+#button-17 .knobs span {
     content: '开';
     position: absolute;
     top: 4px;
@@ -966,30 +978,36 @@ body {
     line-height: 1;
     padding: 9px 4px;
 }
-#button-17 .knobs:before{
-    transition: 0.3s ease all,left 0.5s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+
+#button-17 .knobs:before {
+    transition: 0.3s ease all, left 0.5s cubic-bezier(0.18, 0.89, 0.35, 1.15);
     z-index: 2;
 }
+
 #button-17 .knobs span {
     background-color: #03a9f4;
     border-radius: 2px;
-    transition: 0.3s ease all,left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
     z-index: 1;
 }
-#button-17 .checkbox:checked + .knobs:before{
+
+#button-17 .checkbox:checked + .knobs:before {
     content: '关';
     left: 42px;
 }
+
 #button-17 .checkbox:checked + .knobs span {
     left: 42px;
     background-color: #f44336;
 }
-#button-17 .checkbox:checked ~ .layer{
+
+#button-17 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
+
 /*按钮18*/
 #button-18 .knobs:before,
-#button-18 .knobs span{
+#button-18 .knobs span {
     content: '开';
     position: absolute;
     top: 4px;
@@ -1002,7 +1020,8 @@ body {
     background-color: #03a9f4;
     border-radius: 2px;
 }
-#button-18 .knobs:before{
+
+#button-18 .knobs:before {
     top: 50%;
     left: 8px;
     width: 20px;
@@ -1011,14 +1030,16 @@ body {
     background-color: transparent;
     z-index: 2;
 }
-#button-18 .knobs span{
+
+#button-18 .knobs span {
     width: 20px;
     height: 10px;
     padding: 9px 4px;
-    transition: 0.3s ease all,left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
     z-index: 1;
 }
-#button-18 .checkbox:active + .knobs:before{
+
+#button-18 .checkbox:active + .knobs:before {
     left: 10px;
     width: 46px;
     height: 4px;
@@ -1028,25 +1049,31 @@ body {
     transition: 0.3s ease all;
     overflow: hidden;
 }
-#button-18 .checkbox:active + .knobs span{
+
+#button-18 .checkbox:active + .knobs span {
     width: 58px;
 }
-#button-18 .checkbox:checked:active + .knobs:before{
+
+#button-18 .checkbox:checked:active + .knobs:before {
     left: auto;
     right: 10px;
     background-color: #d80000;
 }
-#button-18 .checkbox:checked:active + .knobs span{
+
+#button-18 .checkbox:checked:active + .knobs span {
     margin-left: -38px;
 }
-#button-18 .checkbox:checked + .knobs:before{
+
+#button-18 .checkbox:checked + .knobs:before {
     content: '关';
     left: 47px;
 }
+
 #button-18 .checkbox:checked + .knobs span {
     left: 42px;
     background-color: #f44336;
 }
-#button-18 .checkbox:checked ~ .layer{
+
+#button-18 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
