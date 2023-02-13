@@ -1,0 +1,143 @@
+/*定义变量*/
+$emoji-base-color: #ffda6a;
+$emoji-like-color: #548dff;
+$emoji-love-color: #f55064;
+$emoji-angry-color: #d5234c;
+$emoji-white-color: #ffffff;
+$emoji-black-color: #000000;
+$emoji-text-color: #8a8a8a;
+
+body {
+  text-align: center;
+  //margin三个值:上 左右 下
+  margin: 80px auto 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.emoji {
+  width: 120px;
+  height: 120px;
+  margin: 15px 15px 40px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    bottom: -40px;
+    font-size: 18px;
+    width: 60px;
+    /*父元素left的的50%-30px*/
+    left: calc(50% - 30px);
+    color: $emoji-text-color;
+  }
+}
+
+.emoji__face,
+.emoji__eyebrows,
+.emoji__eyes,
+.emoji__mouth,
+.emoji__tongue,
+.emoji__heart,
+.emoji__hand,
+.emoji__thumb, {
+  position: absolute;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+  }
+}
+
+.emoji__face {
+  width: inherit;
+  height: inherit;
+}
+
+/*点赞emoji-背景*/
+.emoji--like {
+  background-color: $emoji-like-color;
+}
+
+/*点赞emoji-手腕部分*/
+.emoji__hand {
+  left: 25px;
+  bottom: 30px;
+  width: 20px;
+  height: 40px;
+  background-color: $emoji-white-color;
+  border-radius: 5px;
+  z-index: 0;
+  animation: hands-up 2s linear infinite;
+
+  /*点赞emoji-四指握拳部分*/
+  &:before {
+    left: 25px;
+    bottom: 5px;
+    width: 40px;
+    background-color: inherit;
+    height: 10px;
+    /*border-radius四个值：左上、右上、右下和左下*/
+    border-radius: 2px 10px 10px 2px;
+    /*{box-shadow:X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色 投影方式}*/
+    box-shadow: 1px -9px 0 1px $emoji-white-color,
+    2px -19px 0 2px $emoji-white-color,
+    3px -29px 0 3px $emoji-white-color;
+  }
+}
+
+/*点赞emoji-大拇指部分*/
+.emoji__thumb {
+  border-bottom: 20px solid $emoji-white-color;
+  border-left: 20px solid transparent;
+  top: -25px;
+  right: -25px;
+  z-index: 2;
+  transform: rotate(5deg);
+  /*设置变形原点为左下角*/
+  transform-origin: 0 100%;
+  animation: thumbs-up 2s linear infinite;
+
+  //大拇指头
+  &:before {
+    border-radius: 50% 50% 0 0;
+    background-color: $emoji-white-color;
+    width: 10px;
+    height: 12px;
+    left: -10px;
+    top: -8px;
+    transform: rotate(-15deg);
+    transform-origin: 100% 100%;
+    /*用来链接头和主体*/
+    box-shadow: -1px 4px 0 -1px $emoji-white-color;
+  }
+}
+
+
+/*动画效果部分*/
+
+/*点赞emoji-手腕动画*/
+@keyframes hands-up {
+  25% {
+    /*rotate 以中心点顺时针旋转15度*/
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg) translateY(-10px);
+  }
+  75%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes thumbs-up {
+  25% {
+    transform: rotate(20deg);
+  }
+  50%,
+  100% {
+    transform: rotate(5deg);
+  }
+}
