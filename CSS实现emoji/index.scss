@@ -157,15 +157,17 @@ body {
   }
 }
 
-.emoji--haha{
-  &:after{
+/*大笑emoji*/
+.emoji--haha {
+  &:after {
     content: '大笑';
   }
-  .emoji__face{
+
+  .emoji__face {
     animation: haha-face 2s linear infinite;
   }
 
-  .emoji__eyes{
+  .emoji__eyes {
     width: 26px;
     height: 6px;
     border-radius: 2px;
@@ -173,9 +175,9 @@ body {
     top: 35px;
     transform: rotate(20deg);
     background: transparent;
-    box-shadow: -25px 5px 0 0 $emoji-black-color,25px -5px 0 0 $emoji-black-color;
+    box-shadow: -25px 5px 0 0 $emoji-black-color, 25px -5px 0 0 $emoji-black-color;
 
-    &:after{
+    &:after {
       left: 0;
       top: 0;
       width: 26px;
@@ -186,24 +188,98 @@ body {
       box-shadow: -25px -5px 0 0 $emoji-black-color, 25px 5px 0 0 $emoji-black-color;
     }
   }
-  .emoji__mouth{
+
+  .emoji__mouth {
     width: 80px;
     height: 40px;
     left: calc(50% - 40px);
     top: 50%;
     background: $emoji-black-color;
-    border-radius:  0 0 40px 40px;
+    border-radius: 0 0 40px 40px;
     overflow: hidden;
     z-index: 1;
     animation: haha-mouth 2s linear infinite;
   }
-  .emoji__tongue{
+
+  .emoji__tongue {
     width: 70px;
     height: 30px;
     background: $emoji-love-color;
     left: calc(50% - 35px);
     bottom: -10px;
     border-radius: 50%;
+  }
+}
+
+/*微笑emoji*/
+.emoji--smile {
+  &:after {
+    content: '微笑';
+  }
+
+  .emoji__face {
+    animation: smile 1s linear infinite alternate;
+  }
+
+  .emoji__eyebrows {
+    left: calc(50% - 3px);
+    top: 30px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -6px 0 0 0 $emoji-black-color, -36px 0 0 0px $emoji-black-color, 6px 0 0 0 $emoji-black-color, 36px 0 0 0px $emoji-black-color;
+
+    &:before,
+    &:after {
+      width: 36px;
+      height: 18px;
+      border-radius: 60px 60px 0 0;
+      background: transparent;
+      border: 6px solid black;
+      box-sizing: border-box;
+      border-bottom: 0;
+      bottom: 3px;
+      left: calc(50% - 18px);
+    }
+
+    &:before {
+      margin-left: -21px;
+    }
+
+    &:after {
+      margin-left: 21px;
+    }
+  }
+
+  .emoji__mouth {
+    top: 60px;
+    background: transparent;
+    left: 50%;
+
+    &:after {
+      width: 80px;
+      height: 80px;
+      left: calc(50% - 40px);
+      top: -75px;
+      border-radius: 50%;
+      border: 6px solid $emoji-black-color;
+      box-sizing: border-box;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      z-index: 1;
+    }
+
+    &:before {
+      width: 6px;
+      height: 6px;
+      background: transparent;
+      border-radius: 50%;
+      bottom: 5px;
+      left: calc(50% - 3px);
+      box-shadow: -25px 0 0 0 $emoji-black-color, 25px 0 0 0 $emoji-black-color, -35px -2px 30px 10px $emoji-angry-color, 35px -2px 30px 10px $emoji-angry-color;
+    }
   }
 }
 
@@ -247,69 +323,80 @@ body {
 
 /*大笑emoji表情动画*/
 @keyframes haha-face {
-  10%{
+  10% {
     transform: translateY(25px);
   }
-  20%{
+  20% {
     transform: translateY(15px);
   }
-  30%{
+  30% {
     transform: translateY(25px);
   }
-  40%{
+  40% {
     transform: translateY(15px);
   }
-  50%{
+  50% {
     transform: translateY(25px);
   }
-  60%{
+  60% {
     transform: translateY(0);
   }
-  70%{
+  70% {
     transform: translateY(-10px);
   }
-  80%{
+  80% {
     transform: translateY(0);
   }
-  90%{
+  90% {
     transform: translateY(-10px);
   }
 }
+
 @keyframes haha-mouth {
-  10%{
+  10% {
     transform: scale(0.6);
     top: 45%;
   }
-  20%{
+  20% {
     transform: scale(0.8);
     top: 45%;
   }
-  30%{
+  30% {
     transform: scale(0.6);
     top: 45%;
   }
-  40%{
+  40% {
     transform: scale(0.8);
     top: 45%;
   }
-  50%{
+  50% {
     transform: scale(0.6);
     top: 45%;
   }
-  60%{
+  60% {
     transform: scale(1);
     top: 50%;
   }
-  70%{
+  70% {
     transform: scale(1.2);
     top: 50%;
   }
-  80%{
+  80% {
     transform: scale(1);
     top: 50%;
   }
-  90%{
+  90% {
     transform: scale(1.1);
     top: 50%;
+  }
+}
+
+/*微笑emoji动画效果*/
+@keyframes smile {
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
   }
 }
