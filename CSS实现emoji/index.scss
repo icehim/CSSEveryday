@@ -410,7 +410,6 @@ body {
     }
   }
 
-
   .emoji__mouth {
     width: 60px;
     height: 80px;
@@ -434,6 +433,75 @@ body {
       left: calc(50% - 3px);
       box-shadow: -18px 0 0 0 $emoji-black-color, 18px 0 0 0 $emoji-black-color;
     }
+  }
+}
+
+/*生气emoji*/
+.emoji--angry {
+  background: linear-gradient($emoji-angry-color -10%, $emoji-base-color);
+  background-size: 100%;
+  animation: angry-color 2s ease-in infinite;
+
+  &:after {
+    content: '生气';
+  }
+
+  .emoji__face {
+    animation: angry-face 2s ease-in infinite;
+  }
+
+  .emoji__eyebrows {
+    left: calc(50% - 3px);
+    top: 55px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -44px 5px 0 0 $emoji-black-color, -7px 16px 0 0 $emoji-black-color, 7px 16px 0 0 $emoji-black-color, 44px 5px 0 0 $emoji-black-color;
+
+    &:before,
+    &:after {
+      width: 50px;
+      height: 20px;
+      border: 6px solid $emoji-black-color;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      top: 0;
+      left: calc(50% - 25px);
+    }
+
+    &:before {
+      margin-left: -25px;
+      transform: rotate(15deg);
+    }
+
+    &:after {
+      margin-left: 25px;
+      transform: rotate(-15deg);
+    }
+  }
+
+  .emoji__eyes {
+    width: 12px;
+    height: 12px;
+    left: calc(50% - 6px);
+    top: 70px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 25px 0 0 0 $emoji-black-color, -25px 0 0 0 $emoji-black-color;
+  }
+
+  .emoji__mouth {
+    width: 36px;
+    height: 18px;
+    left: calc(50% - 18px);
+    bottom: 15px;
+    background: $emoji-black-color;
+    border-radius: 50%;
+    animation: angry-mouth 2s ease-in infinite;
   }
 }
 
@@ -655,5 +723,42 @@ body {
     left: -35px;
     top: 65px;
     transform: rotate(45deg) scale(0);
+  }
+}
+
+/*生气emoji动画效果*/
+@keyframes angry-color {
+  45%, 60% {
+    background-size: 250%;
+  }
+  85%, 100%, 0% {
+    background-size: 100%;
+  }
+}
+
+@keyframes angry-face {
+  35%,
+  60% {
+    transform: translateX(0) translateY(10px) scale(0.9);
+  }
+  40% {
+    transform: translateX(-5px) translateY(10px) scale(0.9);
+  }
+  45% {
+    transform: translateX(5px) translateY(10px) scale(0.9);
+  }
+  50% {
+    transform: translateX(-5px) translateY(10px) scale(0.9);
+  }
+  55% {
+    transform: translateX(5px) translateY(10px) scale(0.9);
+  }
+}
+
+@keyframes angry-mouth {
+  25%,
+  50% {
+    height: 6px;
+    bottom: 25px;
   }
 }
